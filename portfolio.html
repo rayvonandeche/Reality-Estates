@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reality Estates - Portfolio</title>
+
+        <!-- favicon  -->
+        <link rel="icon" href="images/favicon.png">
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+
+        <!-- dist links -->
+        <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/aos-master/dist/aos.css">
+        <link rel="stylesheet" href="dist/glightbox-master/dist/css/glightbox.css">
+        <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/">
+        <link rel="stylesheet" href="dist/swiper-11.0.5/package/swiper-bundle.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
+        <script src="https://kit.fontawesome.com/08c5a1e615.js" crossorigin="anonymous"></script>
+
+        <!-- responsiveness  -->
+
+        <style>
+            .header .container i {
+                visibility: hidden;
+            }
+
+            .Mnavmenu {
+                display: none;
+            }
+
+            @media screen and (max-width: 425px) {
+                .navmenu {
+                    display: none;
+                }
+
+                .header .container i {
+                    visibility: visible;
+                    color: #0077cc;
+                    font-size: 25px;
+                }
+
+                .header .container {
+                    display: flex;
+                    justify-content: space-between;
+
+                }
+
+                .home {
+                    width: 100%;
+                }
+
+                .properties .container .prophead {
+                    padding: 30px 0px;
+                }
+
+                .properties .container .prop2 {
+                    flex-direction: column-reverse;
+                }
+
+                .properties .container .prop2 .desc {
+                    left: 0;
+                }
+
+                .clients .logos img {
+                    width: 100px;
+                    margin: 0;
+                }
+
+                .clients {
+                    padding: 0 0;
+                }
+
+                .Mnavmenu {
+                    display: none;
+                    transition: all 0.3s;
+                }
+
+                .Mnavmenu ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .inquiryform {
+                    margin: 100px 10%;
+                }
+
+                .portfolio .head h2::before {
+                    margin-top: 30px;
+                }
+
+                .portfolio .head h2::after {
+                    margin-top: 30px;
+                    width: 200px;
+                    margin-left: -195px;
+                }
+
+                .row div {
+                    text-align: center;
+                }
+
+                .portfolio .container {
+                    justify-content: center;
+                }
+            }
+
+            @media screen and (max-width: 1199px) {
+                .navmenu {
+                    display: none;
+                }
+
+                .header .container i {
+                    visibility: visible;
+                    color: #0077cc;
+                    font-size: 25px;
+                }
+
+                .header .container {
+                    display: flex;
+
+                }
+
+                .Mnavmenu {
+                    display: none;
+                    transition: all 0.3s;
+                }
+
+                .Mnavmenu ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                #navclose {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    margin-left: 580px;
+                }
+
+                .glightbox img{
+                    width: 300px;
+                }
+            }
+        </style>
+
+        <script>
+            function opennav() {
+                document.getElementById("Mnavmenu").style.display = "flex"
+                document.getElementById("navopen").style.visibility = "hidden"
+                document.getElementById("navclose").style.visibility = "visible"
+            }
+            function closenav() {
+                document.getElementById("Mnavmenu").style.display = "none"
+                document.getElementById("navopen").style.visibility = "visible"
+                document.getElementById("navclose").style.visibility = "hidden"
+            }
+
+        </script>
+
+    </head>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <section>
+        <header class="header fixed-top  " id="header">
+            <div class="container">
+                <div class="logo" data-aos="fade-in" data-aos-duration="700">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html">
+                        <h3>Reality <span>Estates</span></h3>
+                    </a>
+                </div>
+
+                <nav class="navmenu" id="navmenu" data-aos="fade-in" data-aos-duration="700">
+                    <ul>
+                        <li><a href="index.html#home" class="active">Home</a></li>
+                        <li><a href="apartments.html">Buy</a></li>
+                        <li><a href="portfolio.html" class="ddrop">Portofolio</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+
+                </nav>
+
+                <i onclick="opennav()" id="navopen" class="fa-solid fa-bars d-flex  align-items-center "
+                    style="margin-right: 20px;"></i>
+                <i onclick="closenav()" id="navclose"
+                    class="fa-solid fa-xmark d-flex  align-items-center justify-content-center "
+                    style="visibility:hidden ; position:absolute; left:372px; top:17px"></i>
+
+            </div>
+
+            <nav class="Mnavmenu" id="Mnavmenu" data-aos="fade-in" data-aos-duration="700">
+                <ul>
+                    <li><a href="index.html#home" class="active">Home</a></li>
+                    <li><a href="apartments.html">Buy</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </section>
+
+    <!-- endo of navbar  -->
+
+
+    <!-- gallery -->
+
+    <section class="portfolio">
+
+        <!-- under development -->
+
+        <div class="container" data-aos="fade-up" data-aos-duration="700">
+
+            <div class="head">
+                <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Under Development</h2>
+                <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Check out development projects
+                    ongoing construction with modern architectural designs.</p>
+            </div>
+
+            <!-- first row  -->
+            <div class="row">
+                <!-- item1 -->
+
+                <div class="col-md-4 hse1">
+                    <a href="images/rent/resident.jpg" class="glightbox"
+                        data-glightbox="description: .me; descPosition: right" data-zoomable="false"
+                        data-draggable="false" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc">
+                        <h2>Ellington</h2>
+                        <h3>Runda</h3>
+                        <p class="glightbox-desc me">Escape to Tranquil Living <br>
+                            Serenity Haven Apartments offer a haven of peace and luxury in the heart of the city.
+                            Nestled amidst lush greenery, these modern apartments provide a perfect blend of
+                            contemporary design and serene surroundings. Residents can unwind in spacious, thoughtfully
+                            designed homes with panoramic views, while enjoying the convenience of nearby shopping,
+                            dining, and recreational facilities.</p>
+                    </div>
+
+                </div>
+
+                <!-- item 2  -->
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident1.jpg" class="glightbox"
+                        data-glightbox="description: .me1; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500" data-aos-delay="250">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident1_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc">
+                        <h2>The Carlyle</h2>
+                        <h3>Ruai</h3>
+                        <p class="glightbox-desc me1">Where Style Meets City Living
+
+                            Urban Oasis Residences redefine urban living with a touch of sophistication. These sleek and
+                            stylish apartments boast modern architecture and upscale amenities. Enjoy the vibrant city
+                            life while retreating to your oasis in the sky. Floor-to-ceiling windows offer breathtaking
+                            views, and the rooftop terrace provides a perfect setting for socializing. Live in the lap
+                            of luxury with convenience at your doorstep.</p>
+                    </div>
+
+                </div>
+
+                <!-- item 3  -->
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident2.jpg" class="glightbox"
+                        data-glightbox="description: .me2; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500" data-aos-delay="300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident2_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc">
+                        <h2>Pembroke</h2>
+                        <h3>Diani</h3>
+                        <p class="glightbox-desc me2">Elevate Your Living Experience
+
+                            Harbor View Heights is a waterfront gem, offering a unique living experience with stunning
+                            views of the harbor and beyond. These luxurious apartments are designed for those who
+                            appreciate the finer things in life. From gourmet kitchens to private balconies overlooking
+                            the water, each residence is a masterpiece of comfort and style. Immerse yourself in a
+                            community that combines elegance, convenience, and the beauty of coastal living.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="head">
+                <h2>Finished Projects</h2>
+                <p>Check out development projects which have been completed by Reality Estates</p>
+            </div>
+
+            <!-- second row  -->
+
+            <div class="row">
+
+                <div class="col-md-4 hse1">
+                    <a href="images/rent/resident3.jpg" class="glightbox"
+                        data-glightbox="description: .me; descPosition: right" data-zoomable="false"
+                        data-draggable="false" data-aos="fade-up" data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident3_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Serenity Havens</h2>
+                        <h3>Muthaiga</h3>
+                        <p class="glightbox-desc me">Nature-Inspired Living in the Heart of the City
+
+                            Maple Grove Residences invite you to embrace a harmonious lifestyle where modern
+                            conveniences meet the tranquility of nature. Surrounded by landscaped gardens and scenic
+                            pathways, these residences offer a perfect blend of comfort and eco-friendly living. Immerse
+                            yourself in a community that values sustainability without compromising on luxury..</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident4.jpg" class="glightbox"
+                        data-glightbox="description: .me1; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident4_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Skyline Terrace</h2>
+                        <h3>Nanyuki</h3>
+                        <p class="glightbox-desc me1">Elevate Your Horizon, Define Your Space
+
+                            Skyline Terrace Apartments redefine city living with an emphasis on expansive spaces and
+                            panoramic city views. Each residence is a masterpiece of contemporary design, featuring
+                            open-concept layouts and premium finishes. Enjoy the convenience of urban living while
+                            basking in the breathtaking views from your private terrace.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident5.jpg" class="glightbox"
+                        data-glightbox="description: .me2; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident5_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Harmony Heights</h2>
+                        <h3>Diani</h3>
+                        <p class="glightbox-desc me2">Elevate Your Living Experience
+
+                            Harbor View Heights is a waterfront gem, offering a unique living experience with stunning
+                            views of the harbor and beyond. These luxurious apartments are designed for those who
+                            appreciate the finer things in life. From gourmet kitchens to private balconies overlooking
+                            the water, each residence is a masterpiece of comfort and style. Immerse yourself in a
+                            community that combines elegance, convenience, and the beauty of coastal living.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- third row  -->
+            <div class="row">
+
+                <div class="col-md-4 hse1">
+                    <a href="images/rent/resident6.jpg" class="glightbox"
+                        data-glightbox="description: .me; descPosition: right" data-zoomable="false"
+                        data-draggable="false" data-aos="fade-up" data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident6_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Pinecrest Penthouse</h2>
+                        <h3>Parklands</h3>
+                        <p class="glightbox-desc me">Where Comfort Meets Community
+
+                            Harmony Heights is more than just a place to live; it's a community that fosters connections
+                            and well-being. These thoughtfully designed apartments prioritize comfort and functionality,
+                            creating a welcoming environment for residents. With communal spaces for socializing and a
+                            focus on wellness, Harmony Heights is where neighbors become friends.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident7.jpg" class="glightbox"
+                        data-glightbox="description: .me1; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident7_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Meadowview Apartments</h2>
+                        <h3>Kitengela</h3>
+                        <p class="glightbox-desc me1">Luxury Living at the Pinnacle
+
+                            Pinecrest Penthouses offer the epitome of luxury living in the heart of the city. Indulge in
+                            the opulence of spacious penthouse suites adorned with high-end finishes and breathtaking
+                            cityscape views. This exclusive residential enclave redefines urban sophistication,
+                            providing residents with a lifestyle of unparalleled elegance.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident8.jpg" class="glightbox"
+                        data-glightbox="description: .me2; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident8_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Cityscape Residence</h2>
+                        <h3>Kakamega</h3>
+                        <p class="glightbox-desc me2">Urban Living, Redefined
+
+                            Cityscape Residences embody the dynamic spirit of urban living. These contemporary
+                            apartments are strategically located in the heart of the city, offering residents easy
+                            access to cultural, dining, and entertainment hubs. With sleek designs and smart living
+                            spaces, Cityscape Residences cater to those who seek a cosmopolitan lifestyle.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- fourth row  -->
+
+            <div class="row">
+
+                <div class="col-md-4 hse1">
+                    <a href="images/rent/resident9.jpg" class="glightbox"
+                        data-glightbox="description: .me; descPosition: right" data-zoomable="false"
+                        data-draggable="false" data-aos="fade-up" data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident9_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Tranquil Terrace Homes</h2>
+                        <h3>Kilifi</h3>
+                        <p class="glightbox-desc me">Escape to Tranquil Living <br>
+                            Serenity Haven Apartments offer a haven of peace and luxury in the heart of the city.
+                            Nestled amidst lush greenery, these modern apartments provide a perfect blend of
+                            contemporary design and serene surroundings. Residents can unwind in spacious, thoughtfully
+                            designed homes with panoramic views, while enjoying the convenience of nearby shopping,
+                            dining, and recreational facilities.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident11.jpg" class="glightbox"
+                        data-glightbox="description: .me1; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident11_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Azure Skies</h2>
+                        <h3>Nanyuki</h3>
+                        <p class="glightbox-desc me1">Where Style Meets City Living
+
+                            Urban Oasis Residences redefine urban living with a touch of sophistication. These sleek and
+                            stylish apartments boast modern architecture and upscale amenities. Enjoy the vibrant city
+                            life while retreating to your oasis in the sky. Floor-to-ceiling windows offer breathtaking
+                            views, and the rooftop terrace provides a perfect setting for socializing. Live in the lap
+                            of luxury with convenience at your doorstep.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <a href="images/rent/resident10.jpg" class="glightbox"
+                        data-glightbox="description: .me2; descPosition: right" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="images/rent/resident10_s.jpg" alt="image" width="480" />
+                    </a>
+
+                    <div class=" mydesc" data-aos="zoom-out" data-aos-duration="500">
+                        <h2>Urban Oasis</h2>
+                        <h3>Ruaraka</h3>
+                        <p class="glightbox-desc me2">Elevate Your Living Experience
+
+                            Harbor View Heights is a waterfront gem, offering a unique living experience with stunning
+                            views of the harbor and beyond. These luxurious apartments are designed for those who
+                            appreciate the finer things in life. From gourmet kitchens to private balconies overlooking
+                            the water, each residence is a masterpiece of comfort and style. Immerse yourself in a
+                            community that combines elegance, convenience, and the beauty of coastal living.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="footer" id="footer">
+        <div class="container">
+            <div id="content">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+                            <h1 class="sub-title">Contact Us</h1>
+                            <p><i class="fa-solid fa-envelope"></i>info@realityestates.co.ke</p>
+                            <p><i class="fa-solid fa-phone"></i></i>+254717655805</p>
+                            <div class="social-icons">
+                                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></i></a>
+                                <a href="https://instagram.com" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <!-- <a href="/images/my-cv.pdf"class="btn btn2" download>Download CV</a> -->
+                        </div>
+                        <div class="contact-right" data-aos="flip-down" data-aos-delay="100">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your name" required>
+                                <input type="email" name="Email" placeholder="Your email" required>
+                                <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright container ">
+                    <p>Copyright &copy;Reality Estates. Made in Kenya. </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- swiper js -->
+
+    <script src="dist/swiper-11.0.5/package/swiper-bundle.min.js"></script>
+
+    <!-- boootsrap js -->
+    <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+
+
+    <!-- include glightbox  -->
+    <script src="dist/glightbox-master/dist/js/glightbox.min.js"></script>
+
+    <!-- initiate glightbox  -->
+    <script>
+        const lightbox = GLightbox();
+    </script>
+
+    <!-- include aos -->
+    <script src="dist/aos-master/dist/aos.js"></script>
+    <!-- init aos -->
+    <script>
+        AOS.init({
+            once: true,
+            easing: 'ease-in-out-sine',
+        }); 
+    </script>
+
+    <script>
+        function inquire() {
+            alert('Thank you');
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

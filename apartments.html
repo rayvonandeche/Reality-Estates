@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality Estates - Apartments</title>
+
+    <!-- favicon  -->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- dist links -->
+    <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="dist/glightbox-master/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/">
+    <link rel="stylesheet" href="dist/swiper-11.0.5/package/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/08c5a1e615.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        @media screen and (max-width : 1137.78px) {
+            .navmenu ul li a {
+                padding: 16px 25px 0 25px;
+            }
+
+            .apartments .container .row .image {
+                width: 400px;
+            }
+
+        }
+    </style>
+
+    <!-- responsiveness  -->
+
+    <style>
+        .header .container i {
+            visibility: hidden;
+        }
+
+        .Mnavmenu {
+            display: none;
+        }
+
+        @media screen and (max-width: 425px) {
+            .navmenu {
+                display: none;
+            }
+
+            .header .container i {
+                visibility: visible;
+                color: #0077cc;
+                font-size: 25px;
+            }
+
+            .header .container {
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            .home {
+                width: 100%;
+            }
+
+            .properties .container .prophead {
+                padding: 30px 0px;
+            }
+
+            .properties .container .prop2 {
+                flex-direction: column-reverse;
+            }
+
+            .properties .container .prop2 .desc {
+                left: 0;
+            }
+
+            .clients .logos img {
+                width: 100px;
+                margin: 0;
+            }
+
+            .clients {
+                padding: 0 0;
+            }
+
+            .Mnavmenu {
+                display: none;
+                transition: all 0.3s;
+            }
+
+            .Mnavmenu ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .inquiryform {
+                margin: 100px 10%;
+            }
+
+            .apartmentshead h2::before {
+                width: 40px;
+                top: 30px;
+            }
+
+            .apartmentshead h2::after {
+                width: 165px;
+                margin-left: -160px;
+                top: 30px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 1199px) {
+            .navmenu {
+                display: none;
+            }
+
+            .header .container i {
+                visibility: visible;
+                color: #0077cc;
+                font-size: 25px;
+            }
+
+            .header .container {
+                display: flex;
+
+            }
+
+            .Mnavmenu {
+                display: none;
+                transition: all 0.3s;
+            }
+
+            .Mnavmenu ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #navclose {
+                align-items: flex-end;
+                justify-content: flex-end;
+                margin-left: 580px;
+            }
+        }
+    </style>
+
+    <script>
+        function opennav() {
+            document.getElementById("Mnavmenu").style.display = "flex"
+            document.getElementById("navopen").style.visibility = "hidden"
+            document.getElementById("navclose").style.visibility = "visible"
+        }
+        function closenav() {
+            document.getElementById("Mnavmenu").style.display = "none"
+            document.getElementById("navopen").style.visibility = "visible"
+            document.getElementById("navclose").style.visibility = "hidden"
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <section>
+        <header class="header fixed-top  " id="header">
+            <div class="container">
+                <div class="logo" data-aos="fade-in" data-aos-duration="700">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html">
+                        <h3>Reality <span>Estates</span></h3>
+                    </a>
+                </div>
+
+                <nav class="navmenu" id="navmenu" data-aos="fade-in" data-aos-duration="700">
+                    <ul>
+                        <li><a href="index.html#home" class="active">Home</a></li>
+                        <li><a href="apartments.html">Buy</a></li>
+                        <li><a href="portfolio.html" class="ddrop">Portfolio</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <i onclick="opennav()" id="navopen" class="fa-solid fa-bars d-flex  align-items-center "
+                    style="margin-right: 100px;"></i>
+                <i onclick="closenav()" id="navclose"
+                    class="fa-solid fa-xmark d-flex  align-items-center justify-content-center "
+                    style="visibility:hidden ; position:absolute; left:372px; top:17px"></i>
+            </div>
+
+            <nav class="Mnavmenu" id="Mnavmenu" data-aos="fade-in" data-aos-duration="700">
+                <ul>
+                    <li><a href="index.html#home" class="active">Home</a></li>
+                    <li><a href="apartments.html">Buy</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </section>
+    <!-- endo of navbar  -->
+
+
+    <!-- apartment to buy  -->
+
+    <section class="apartments" id="apartments">
+
+        <div class="apartmentshead">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Buy Apartments</h2>
+            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">Unlock Your Dream Home Today. Invest in
+                your future with our Exceptional Apartments. </p>
+        </div>
+
+        <div class="container">
+
+            <!-- one  -->
+            <div class="row ">
+                <div class="image col-md-6" data-aos="zoom-out-up" data-aos-duration="400">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment2.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Evoke</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Kileleshwa</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 4,000 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 6,400,000</p>
+                </div>
+            </div>
+
+            <!-- two  -->
+            <div class="row ">
+                <div class="image col-md-6" data-aos="zoom-out-up" data-aos-duration="400">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment4.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Serenity Heights</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Kilifi</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 6,500 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 8,400,000</p>
+                </div>
+            </div>
+
+            <!-- three  -->
+            <div class="row ">
+                <div class="image col-md-6" data-aos="fade-up" data-aos-duration="300">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment5.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Skyline Haven</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Nakuru</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 7,200 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 4,800,000</p>
+                </div>
+            </div>
+
+            <!-- four  -->
+
+            <div class="row ">
+                <div class="image col-md-6" data-aos="fade-up" data-aos-duration="300">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment6.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Tranquil Gardens</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Kitengela</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 7,500 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 8,400,000</p>
+                </div>
+            </div>
+
+            <!-- five -->
+
+            <div class="row ">
+                <div class="image col-md-6" data-aos="fade-up" data-aos-duration="300">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment7.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Pinnacle Plaza</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Karen</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 8,500 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 9,600,000</p>
+                </div>
+            </div>
+
+
+            <!-- six -->
+            <div class="row ">
+                <div class="image col-md-6" data-aos="fade-up" data-aos-duration="300">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment8.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>HW Wilson</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Runda</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 4000 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 6,400,000</p>
+                </div>
+            </div>
+
+            <!-- seven  -->
+            <div class="row ">
+                <div class="image col-md-6" data-aos="fade-up" data-aos-duration="300">
+                    <a href="inquire.html" class="btn1">Inquire</a>
+                    <img src="images/apartment9.png" alt="" class="img-fluid ">
+                </div>
+                <div class="descB col-md-6 ">
+                    <h3 data-aos="fade-left" data-aos-duration="300" data-aos-delay="100"><i
+                            class="fa-solid fa-house"></i>Barak570</h3>
+                    <h4 data-aos="fade-left" data-aos-duration="300" data-aos-delay="200"><i
+                            class="fa-solid fa-location-dot"></i>Twiga</h4>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="300"><i
+                            class="fa-solid fa-layer-group"></i>Floor Area : 4000 sqm.</p>
+                    <p data-aos="fade-left" data-aos-duration="300" data-aos-delay="400"><i
+                            class="fa-solid fa-sack-dollar"></i>Price: 6,400,000</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <!-- contacts and footer  -->
+
+    <section class="footer" id="footer">
+        <div class="container">
+            <div id="content">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+                            <h1 class="sub-title">Contact Us</h1>
+                            <p><i class="fa-solid fa-envelope"></i>info@realityestates.co.ke</p>
+                            <p><i class="fa-solid fa-phone"></i></i>+254717655805</p>
+                            <div class="social-icons">
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></i></a>
+                                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <!-- <a href="/images/my-cv.pdf"class="btn btn2" download>Download CV</a> -->
+                        </div>
+                        <div class="contact-right" data-aos="flip-down" data-aos-delay="100">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your name" required>
+                                <input type="email" name="Email" placeholder="Your email" required>
+                                <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright container ">
+                    <p>Copyright &copy;Reality Estates. Made in Kenya. </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- swiper js -->
+
+    <script src="dist/swiper-11.0.5/package/swiper-bundle.min.js"></script>
+
+    <!-- boootsrap js -->
+    <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+
+
+    <!-- include glightbox  -->
+    <script src="dist/glightbox-master/dist/js/glightbox.min.js"></script>
+
+    <!-- include aos -->
+    <script src="dist/aos-master/dist/aos.js"></script>
+    <!-- init aos -->
+    <script>
+        AOS.init({
+            once: true,
+            easing: 'ease-in-out',
+        }); 
+    </script>
+
+</body>
+
+</html>

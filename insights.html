@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reality Estates - Customer Review</title>
+
+  <!-- favicon  -->
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- dist links -->
+  <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="dist/glightbox-master/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="dist/bootstrap-5.3.2-dist/css/">
+  <link rel="stylesheet" href="dist/swiper-11.0.5/package/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/08c5a1e615.js" crossorigin="anonymous"></script>
+
+
+
+  <style>
+    @media screen and (max-width : 1280px) {
+      .navmenu ul li a {
+        padding: 16px 25px 0 25px;
+      }
+
+      .apartments .container .row .image {
+        width: 400px;
+      }
+
+
+    }
+  </style>
+
+  <!-- responsiveness  -->
+
+  <style>
+    .header .container i {
+      visibility: hidden;
+    }
+
+    .Mnavmenu {
+      display: none;
+    }
+
+    @media screen and (max-width: 425px) {
+      .navmenu {
+        display: none;
+      }
+
+      .header .container i {
+        visibility: visible;
+        color: #0077cc;
+        font-size: 25px;
+      }
+
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+
+      }
+
+      .home {
+        width: 100%;
+      }
+
+      .properties .container .prophead {
+        padding: 30px 0px;
+      }
+
+      .properties .container .prop2 {
+        flex-direction: column-reverse;
+      }
+
+      .properties .container .prop2 .desc {
+        left: 0;
+      }
+
+      .clients .logos img {
+        width: 100px;
+        margin: 0;
+      }
+
+      .clients {
+        padding: 0 0;
+      }
+
+      .Mnavmenu {
+        display: none;
+        transition: all 0.3s;
+      }
+
+      .Mnavmenu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .inquiryform {
+        margin: 100px 10%;
+      }
+
+      .testimonials .customercard {
+        width: 85%;
+        margin-top: 20px;
+      }
+
+      .testimonials .customercard:last-child {
+        margin-bottom: 50px;
+      }
+
+      .testimonials .row {
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .first {
+        background-image: url(images/livingroom.png);
+      }
+
+      .second {
+        background-image: url(images/kitchen.png);
+      }
+
+      .third {
+        background-image: url(images/bedroom.png);
+      }
+
+    }
+
+    @media screen and (max-width: 1199px) {
+      .navmenu {
+        display: none;
+      }
+
+      .header .container i {
+        visibility: visible;
+        color: #0077cc;
+        font-size: 25px;
+      }
+
+      .header .container {
+        display: flex;
+
+      }
+
+      .Mnavmenu {
+        display: none;
+        transition: all 0.3s;
+      }
+
+      .Mnavmenu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #navclose {
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-left: 580px;
+      }
+
+      .testimonials .customercard{
+        width: 300px;
+      }
+
+
+    }
+  </style>
+
+  <script>
+    function opennav() {
+      document.getElementById("Mnavmenu").style.display = "flex"
+      document.getElementById("navopen").style.visibility = "hidden"
+      document.getElementById("navclose").style.visibility = "visible"
+    }
+    function closenav() {
+      document.getElementById("Mnavmenu").style.display = "none"
+      document.getElementById("navopen").style.visibility = "visible"
+      document.getElementById("navclose").style.visibility = "hidden"
+    }
+
+  </script>
+
+
+
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+
+  <section>
+    <header class="header fixed-top  " id="header">
+      <div class="container">
+        <div class="logo" data-aos="fade-in" data-aos-duration="700">
+          <a href="index.html"><img src="images/logo.png" alt=""></a>
+          <a href="index.html">
+            <h3>Reality <span>Estates</span></h3>
+          </a>
+        </div>
+
+        <nav class="navmenu" id="navmenu" data-aos="fade-in" data-aos-duration="700">
+          <ul>
+            <li><a href="index.html#home" class="active">Home</a></li>
+            <li><a href="apartments.html">Buy</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+
+        <i onclick="opennav()" id="navopen" class="fa-solid fa-bars d-flex  align-items-center "
+          style="margin-right: 60px;"></i>
+        <i onclick="closenav()" id="navclose"
+          class="fa-solid fa-xmark d-flex  align-items-center justify-content-center "
+          style="visibility:hidden ; position:absolute; left:372px; top:17px"></i>
+
+      </div>
+
+      <nav class="Mnavmenu" id="Mnavmenu" data-aos="fade-in" data-aos-duration="700">
+        <ul>
+          <li><a href="index.html#home" class="active">Home</a></li>
+          <li><a href="apartments.html">Buy</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+  </section>
+  <!-- endo of navbar  -->
+
+
+  <!-- carousel -->
+
+  <section class="carousel" id="carousel " data-aos="fade-in" data-aos-duration="900">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active first">
+          <img src="..." class="d-block w-100 ipic " alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Your homeowning journey starts here</h5>
+            <p> Find your dream home today and embark on a journey of a lifetime with us!</p>
+          </div>
+        </div>
+        <div class="carousel-item second">
+          <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Upgrade your lifestyle</h5>
+            <p>Explore our listings now and discover the perfect home that fits your vision and aspirations!</p>
+          </div>
+        </div>
+        <div class="carousel-item third">
+          <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Transform your space</h5>
+            <p>Explore real estate opportunities that align with your goals and secure a prosperous tomorrow!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- customer testimonials  -->
+
+  <section class="testimonials" id="testimonials">
+
+    <div class="container">
+
+      <div class="testimonialhead">
+        <h3 data-aos="fade-up" data-aos-delay="100">Customer Insights</h3>
+        <p data-aos="fade-up" data-aos-delay="200">Reviews from our esteemed satisfied customers.</p>
+      </div>
+
+      <!-- card row 1 -->
+      <div class="row" data-aos="zoom-out">
+
+        <div class="col-md-4 customercard " data-aos="fade-up ">
+          <img src="images/apartment1.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Lisa P.</p>
+              <p>5 hours ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>I've lived in various apartments, but Reality Estates stands out
+              for its exceptional service. The maintenance team is quick to respond, and the leasing office is always
+              friendly and helpful. The community events are a nice touch, creating a sense of belonging<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard ">
+          <img src="images/apartment12.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer2.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Sarah Kiarie</p>
+              <p>4 days ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>I've been a resident for two years, and I continue to be impressed
+              by the level of service from Reality Estates. The management is proactive, and the apartments are
+              well-maintained. The location is convenient, and I appreciate the sense of community they foster<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard ">
+          <img src="images/apartment11.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer4.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Amy G.</p>
+              <p>2 min ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>We had an amazing experience working with [Real Estate Company].
+              Their expertise and guidance made our home-buying journey smooth. Highly recommended<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- card row 2 -->
+
+      <div class="row">
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment4.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer11.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Jason M.</p>
+              <p>3 months ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>I've been a resident for over a year now, and I can't say enough
+              good things about Reality Estates. The amenities are top-notch, and any maintenance issues are
+              addressed promptly. The sense of community here is wonderful, making it feel like home.<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment5.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer6.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Megan L.</p>
+              <p>1 weeks ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>I recently moved into one of the apartments managed by Reality
+              Estates, and I am loving it! The location is fantastic, and the apartment is modern, spacious, and
+              well-maintained. The leasing process was smooth, and the staff was incredibly helpful. Definitely
+              recommend!<i class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment6.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer7.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Jonah K.</p>
+              <p>2 days ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>Finding the perfect apartment was made easy by Reality Estates. The
+              variety of floor plans they offer is impressive, and I found one that suits my lifestyle perfectly. The
+              staff is friendly, and the leasing process was straightforward. Great place to call home!<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- card row 3 -->
+
+      <div class="row">
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment7.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer8.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Carlos R.</p>
+              <p>1 year ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>I moved to the city recently and was lucky to find an apartment
+              through Reality Estates. The location is convenient, and the apartment itself is beautiful. The leasing
+              team was very accommodating, and I appreciate their attention to detail. Highly satisfied<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment8.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer9.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">Emily H.</p>
+              <p>7 months ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>Living in Reality Estates' apartment has been a delightful
+              experience. The community is safe and well-maintained, and the apartments are stylish and comfortable. The
+              leasing staff is responsive, making the move-in process seamless. Highly recommend this place<i
+                class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 customercard " data-aos="fade-up">
+          <img src="images/apartment9.png" alt="" class="img-fluid ">
+          <div class="customer ">
+            <img src="images/customer/customer10.png" alt="" class="img-fluid ">
+            <div class="customername">
+              <p class="name">David K.</p>
+              <p>2 years ago</p>
+            </div>
+
+          </div>
+
+          <div class="testimony">
+            <p><i class="fa-solid fa-quote-left"></i>The attention to detail in the design of these apartments is
+              impressive. Reality Estates knows how to create a comfortable living space. The amenities are fantastic,
+              and the location is convenient. Proud to call this place home!<i class="fa-solid fa-quote-right"></i></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- card row end -->
+    </div>
+  </section>
+
+
+  <!-- clients  -->
+
+  <section id="clients" class="clients">
+    <div class="logos">
+      <div class="row" data-aos="zoom-in-up">
+
+        <img src="images/logo1.png" alt="">
+        <img src="images/logo2.png" alt="">
+        <img src="images/logo3.png" alt="">
+        <img src="images/logo4.png" alt="">
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- contacts and footer  -->
+
+  <section class="footer" id="footer">
+    <div class="container">
+      <div id="content">
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+              <h1 class="sub-title">Contact Us</h1>
+              <p><i class="fa-solid fa-envelope"></i>info@realityestates.co.ke</p>
+              <p><i class="fa-solid fa-phone"></i></i>+254717655805</p>
+              <div class="social-icons">
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></i></a>
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+              <!-- <a href="/images/my-cv.pdf"class="btn btn2" download>Download CV</a> -->
+            </div>
+            <div class="contact-right" data-aos="flip-down" data-aos-delay="100">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your name" required>
+                <input type="email" name="Email" placeholder="Your email" required>
+                <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright container ">
+          <p>Copyright &copy;Reality Estates. Made in Kenya. </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- swiper js -->
+
+  <script src="dist/swiper-11.0.5/package/swiper-bundle.min.js"></script>
+
+  <!-- boootsrap js -->
+  <script src="dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+
+
+  <!-- include glightbox  -->
+  <script src="dist/glightbox-master/dist/js/glightbox.min.js"></script>
+
+  <!-- include aos -->
+  <script src="dist/aos-master/dist/aos.js"></script>
+  <!-- init aos -->
+  <script>
+    AOS.init({
+      once: true,
+      easing: 'ease-in-out',
+    }); 
+  </script>
+
+</body>
+
+</html>
